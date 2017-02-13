@@ -1,0 +1,4 @@
+include LICENSE *.rst *.txt
+recursive-include modeltranslation_db *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

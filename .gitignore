@@ -1,0 +1,10 @@
+*.pyc
+.DS_Store
+/.coverage
+/dist/
+/MANIFEST
+/modeltranslation_db.egg-info/
+ModelTranslation_DB.egg-info/
+build/
+/docs/_build/
+/.tox/
