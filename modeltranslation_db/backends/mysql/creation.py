@@ -44,7 +44,11 @@ class TranslationMySQLCreation(MySQLCreation):
             database=self.connection.alias,
             test_flush=not keepdb,
         )
-        call_command('sync_translation_fields', '--noinput')
+        call_command(
+            'sync_translation_fields',
+            interactive=False,
+            verbosity=max(verbosity - 1, 0),
+        )
         # We then serialize the current state of the database into a string
         # and store it on the connection. This slightly horrific process is so people
         # who are testing on databases without transactions or who are using
